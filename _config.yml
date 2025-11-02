@@ -1,3 +1,7 @@
 theme: jekyll-theme-hacker
-title: Qiang Zhang
-description: Ph.D.
+title: Chenxi Liu
+description: Assistant Professor
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
