@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chenxiliu-hnu.github.io/homepage/sitemap.xml
