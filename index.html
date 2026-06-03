@@ -20,6 +20,8 @@
     text-align: justify;
     font-size: 16px; 
     font-family: "Georgia", Times, serif;
+    color: #202736;
+    background: #f4f7fb;
   }
 
   p, li {
@@ -31,6 +33,199 @@
   h2 {
     font-size: 1.4em;
   }
+
+  .container {
+    width: min(1120px, calc(100% - 48px));
+    margin-top: 32px;
+    padding: 30px;
+    border: 1px solid #dbe4f0;
+    box-shadow: 0 18px 48px rgba(27, 55, 104, 0.12);
+  }
+
+  a {
+    color: #1f5aa6;
+  }
+
+  h2 {
+    color: #163f73;
+    border-bottom: 1px solid #d8e2ef;
+  }
+
+  .profile-hero {
+    display: grid;
+    grid-template-columns: 190px minmax(360px, 1fr) minmax(250px, 330px);
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 26px;
+    padding: 18px;
+    border: 1px solid #e2e9f3;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fbff 62%, #f1f7f6 100%);
+  }
+
+  .profile-photo {
+    width: 190px;
+    max-width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 8px 22px rgba(28, 49, 82, 0.16);
+  }
+
+  .profile-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .profile-name {
+    margin: 0 0 8px;
+    padding: 0;
+    border-bottom: 0;
+    color: #102f5d;
+    font-size: 2.6em;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .profile-role {
+    margin: 0 0 14px;
+    color: #28364a;
+    font-size: 1.18em;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .profile-contact {
+    margin: 0 0 16px;
+    color: #445168;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .profile-links,
+  .profile-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .profile-links a,
+  .profile-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 4px 11px;
+    border: 1px solid #c9d8ea;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #194e8f;
+    font-size: 0.96em;
+    text-decoration: none;
+  }
+
+  .profile-links a:hover,
+  .profile-nav a:hover {
+    border-color: #7ba6d8;
+    background: #eef6ff;
+  }
+
+  .profile-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 22px;
+    border-left: 3px solid #2f8f83;
+    background: rgba(255, 255, 255, 0.78);
+  }
+
+  .side-label {
+    margin: 0 0 8px;
+    color: #647086;
+    font-size: 0.78em;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .focus-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .focus-list span {
+    padding: 5px 9px;
+    border-radius: 4px;
+    background: #e7f2ef;
+    color: #1f665d;
+    font-size: 0.88em;
+    line-height: 1.2;
+  }
+
+  .profile-summary {
+    margin: 0;
+    color: #344157;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .quick-facts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #344157;
+    line-height: 1.45;
+  }
+
+  .quick-facts li {
+    margin: 0 0 8px;
+    text-align: left;
+    font-size: 0.96em;
+  }
+
+  .quick-facts li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      width: min(100% - 24px, 720px);
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .profile-hero {
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+    }
+
+    .profile-photo {
+      width: 150px;
+    }
+
+    .profile-side {
+      grid-column: 1 / -1;
+      border-left: 0;
+      border-top: 3px solid #2f8f83;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .profile-hero {
+      grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+      width: 170px;
+    }
+
+    .profile-name {
+      font-size: 2.1em;
+    }
+  }
 </style>
 
  
@@ -41,31 +236,55 @@
 <div id="container"> 
 <div class="container"> 
 
-<table class="imgtable"><tr><td>
-<a href="./"><img src="./Files/ChenxiLiu-Photo.jpg" alt="" style="max-width: 160px; height: auto;" /></a>
-<td align="left"><p><a href="./"><font size="5">Chenxi LIU</font></a><br />
-Assistant Professor<br />
-Centre for Artificial Intelligence and Robotics <br />
-Hong Kong Institute of Science & Innovation, Chinese Academy of Sciences <br />
-3/F, 17W, Science Park West Avenue, Hong Kong Science Park, Hong Kong<br /><br />
-Email: chenxi.liu@cair-cas.org.hk<br /><br />
+<section class="profile-hero" aria-label="Profile summary">
+  <a href="./"><img class="profile-photo" src="./Files/ChenxiLiu-Photo.jpg" alt="Chenxi Liu" /></a>
 
-[<a href="https://scholar.google.com/citations?user=QKdXEeIAAAAJ&hl=zh-CN">Google Scholar</a>] 
- <!--[<a href="https://www.researchgate.net/profile/Chenxi-Liu-32" target="_blank">ResearchGate</a>]-->
-[<a href="https://orcid.org/0000-0001-8742-337X" target="_blank">ORCID</a>] 
-[<a href="https://github.com/ChenxiLiu-HNU" target="_blank">GitHub</a>] 
-<br>
-<br>
- <class="staffshortcut">
- <A HREF="#About Me">About me</A> | 
- <A HREF="#News">News</A> |
- <A HREF="#Publications">Publications</A> | 
- <A HREF="#Awards">Awards</A>  
- <!--<A HREF="#Book">Book</A> |-->
-<!--<A HREF="#Services">Services</A>-->
-<br>
- 
-</td></tr></table>
+  <div class="profile-main">
+    <h1 class="profile-name">Chenxi LIU</h1>
+    <p class="profile-role">
+      Assistant Professor<br />
+      Centre for Artificial Intelligence and Robotics<br />
+      Hong Kong Institute of Science &amp; Innovation, Chinese Academy of Sciences
+    </p>
+    <p class="profile-contact">
+      3/F, 17W, Science Park West Avenue, Hong Kong Science Park, Hong Kong<br />
+      Email: <a href="mailto:chenxi.liu@cair-cas.org.hk">chenxi.liu@cair-cas.org.hk</a>
+    </p>
+
+    <div class="profile-links">
+      <a href="https://scholar.google.com/citations?user=QKdXEeIAAAAJ&amp;hl=zh-CN">Google Scholar</a>
+      <a href="https://orcid.org/0000-0001-8742-337X" target="_blank">ORCID</a>
+      <a href="https://github.com/ChenxiLiu-HNU" target="_blank">GitHub</a>
+    </div>
+
+    <nav class="profile-nav" aria-label="Page sections">
+      <a href="#About Me">About</a>
+      <a href="#News">News</a>
+      <a href="#Publications">Publications</a>
+      <a href="#Awards">Awards</a>
+      <a href="#Talks">Talks</a>
+      <a href="#Services">Services</a>
+    </nav>
+  </div>
+
+  <aside class="profile-side">
+    <div>
+      <p class="side-label">Research Focus</p>
+      <div class="focus-list">
+        <span>Spatio-Temporal Data Mining</span>
+        <span>Time Series Analytics</span>
+        <span>Multimodal Learning</span>
+        <span>Efficient LLM Inference</span>
+      </div>
+    </div>
+    <div>
+      <p class="side-label">Profile</p>
+      <p class="profile-summary">
+        I work on data-centric and model-centric methods for spatio-temporal and time series intelligence, with applications in smart cities and healthcare.
+      </p>
+    </div>
+  </aside>
+</section>
  
 <A NAME="About Me"><h2>About Me</h2></A>
 <p>My name is Chenxi Liu. I am currently an Assistant Professor at Hong Kong Institute of Science & Innovation, Chinese Academy of Sciences. Before joining HKISI, I was a Postdoctoral Research Fellow at King Abdullah University of Science and Technology (KAUST), working with Prof. <a href="https://kalnis.org/" target="_blank">Panos Kalnis</a> and a Research Fellow at Nanyang Technological University (NTU), working with Prof. <a href="https://personal.ntu.edu.sg/c.long" target="_blank">Cheng Long</a> and collaborating closely with Prof. <a href="https://bonaldli.github.io/">Ziyue Li</a> from the Technical University of Munich. I obtained my PhD at Hunan University, supervised by Prof. Dong Wang and Prof. <a href="https://zhuxiao-hnu.github.io/en/" target="_blank"> Zhu Xiao</a>. I was also a full-time joint PhD student at NTU. I gained valuable research experience at Zhejiang Lab, supervised by Prof. <a href="https://scholar.google.ca/citations?user=s-HDT8UAAAAJ&hl=en" target="_blank">Hongyang Chen</a>.
