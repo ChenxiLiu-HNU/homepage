@@ -660,19 +660,11 @@ at CIKM 2025, Seoul, Korea.
 
 <A NAME="Visitors"><h2>Visitors</h2></A>
 
-<div id="visitor-section"
-     style="margin: 20px auto;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;">
-
-    <script type="text/javascript"
-            id="mmvst_globe"
-            src="//mapmyvisitors.com/globe.js?d=bbxfXmiDBO1hpzzhaCLfXWQf-6XUuAkeiIXQCIhPPB0">
-    </script>
-
-</div>
+<center>
+<script type="text/javascript"
+        id="mmvst_globe"
+        src="https://mapmyvisitors.com/globe.js?d=bbxfXmiDBO1hpzzhaCLfXWQf-6XUuAkeiIXQCIhPPB0"></script>
+</center>
 
 <div id="article"></div>
 
@@ -685,16 +677,14 @@ at CIKM 2025, Seoul, Korea.
 $(function(){
 
     $(window).scroll(function(){
-        // If scroll
-        var scrollt = document.documentElement.scrollTop + document.body.scrollTop;
+        var scrollt =
+            document.documentElement.scrollTop +
+            document.body.scrollTop;
 
-        // Getting height after scroll
-        if (scrollt > 400)
-        {
+        if (scrollt > 400) {
             $("#back_top").fadeIn(400);
         }
-        else
-        {
+        else {
             $("#back_top").stop().fadeOut(400);
         }
     });
