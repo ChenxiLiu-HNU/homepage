@@ -660,7 +660,7 @@ at CIKM 2025, Seoul, Korea.
 
 <A NAME="Visitors"><h2>Visitors</h2></A>
 
-<div id="visitor-globe-wrapper">
+<div id="visitor-globe-viewport">
     <div id="visitor-globe-scale">
         <script type="text/javascript"
                 id="mmvst_globe"
@@ -669,20 +669,16 @@ at CIKM 2025, Seoul, Korea.
 </div>
 
 <style>
-#visitor-globe-wrapper {
-    width: 300px;
-    height: 300px;
-    margin: 15px auto 20px auto;
-    position: relative;
-    overflow: hidden;
+#visitor-globe-viewport {
+    width: 260px;
+    height: 260px;
 }
 
 #visitor-globe-scale {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(0.5);
-    transform-origin: top center;
+    width: 600px;
+    height: 600px;
+    transform: scale(0.4333);
+    transform-origin: top left;
 }
 </style>
 
