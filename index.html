@@ -660,11 +660,43 @@ at CIKM 2025, Seoul, Korea.
 
 <A NAME="Visitors"><h2>Visitors</h2></A>
 
-<center>
-<script type="text/javascript"
-        id="mmvst_globe"
-        src="https://mapmyvisitors.com/globe.js?d=bbxfXmiDBO1hpzzhaCLfXWQf-6XUuAkeiIXQCIhPPB0"></script>
-</center>
+<div id="visitor-globe-wrapper">
+    <script type="text/javascript"
+            id="mmvst_globe"
+            src="https://mapmyvisitors.com/globe.js?d=bbxfXmiDBO1hpzzhaCLfXWQf-6XUuAkeiIXQCIhPPB0"></script>
+</div>
+
+<style>
+#visitor-globe-wrapper {
+    width: 380px;
+    max-width: 90%;
+    margin: 15px auto 20px auto;
+    text-align: center;
+}
+
+#visitor-globe-wrapper canvas,
+#visitor-globe-wrapper iframe,
+#visitor-globe-wrapper svg {
+    width: 380px !important;
+    height: 380px !important;
+    max-width: 100% !important;
+    max-height: 380px !important;
+}
+
+@media (max-width: 620px) {
+    #visitor-globe-wrapper {
+        width: 280px;
+    }
+
+    #visitor-globe-wrapper canvas,
+    #visitor-globe-wrapper iframe,
+    #visitor-globe-wrapper svg {
+        width: 280px !important;
+        height: 280px !important;
+        max-height: 280px !important;
+    }
+}
+</style>
 
  
 <div id="article"></div>
